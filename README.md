@@ -20,7 +20,7 @@ git clone <URL-DE-TU-FORK>
 cd <NOMBRE-DEL-REPOSITORIO>
 
 # Paso 2: Completar las Tareas Semanales
-El repositorio está organizado por semanas (M05/, M06/, etc.), con archivos de tareas por carpeta.
+El repositorio está organizado por semanas (M05/, M06/, etc.), hay tareas por carpeta.
 1.	Abre el archivo de la semana en VSC.
 2.	Escribe tu código únicamente en las secciones indicadas con TODO dentro de los archivos.
 3.	Prueba tu Código paso a paso (muchas veces) localmente en tu computadora antes de guardar y subir los cambios.
