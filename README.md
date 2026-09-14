@@ -14,7 +14,8 @@ Debes crear tu propia copia (un fork) de este repositorio para poder trabajar.
 ¡Ahora tienes una copia propia de las tareas en tu cuenta!
 4.	Clona tu fork a tu computadora:
 o	En la página de tu fork, haz clic en el botón verde Code y copia la URL (HTTPS).
-o	Abre tu terminal (o Símbolo del sistema / Command Prompt/Terminal en VSC) y ejecuta:
+o	Abre tu terminal (o Símbolo del sistema / Command Prompt/Terminal en VSC). 
+o Asegurate de estar dentro de tu carpeta CS1400 y ejecuta:
 
 git clone <URL-DE-TU-FORK>
 cd <NOMBRE-DEL-REPOSITORIO>
