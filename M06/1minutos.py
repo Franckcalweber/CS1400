@@ -1,5 +1,5 @@
 """
-Tarea en Casa #1: Cálculo Básico de Factura con Validación Simple
+Tarea #1: Cálculo Básico de Factura con Validación Simple
 En este programa, el usuario ingresará la cantidad de minutos usados en un servicio telefónico.
 El programa validará que la entrada sea un número válido, y luego calculará el costo total
 basado en una tarifa fija para los primeros 1000 minutos y una tarifa adicional para los minutos extra.
