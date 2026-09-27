@@ -1,5 +1,5 @@
 """
-NOMBRE: [Tu Nombre]
+NOMBRE: [Franck Calderon]
 MODULO 4 - PROYECTO - TAREA 1
 Un programa para encontrar el cuadrado de un número y evaluar condiciones.
 """
