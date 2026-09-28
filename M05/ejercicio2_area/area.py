@@ -9,7 +9,7 @@
 5. Reto de Iteración Continuada: Cambia la estructura a un bucle while que le pida al usuario radios continuamente con input() hasta que ingrese 'salir', calculando el área de cada radio válido o pidiendo el dato de nuevo si no es válido.
 
 NOMBRE: [Tu Nombre]
-MÓDULO 5 - TAREA 1 (Adaptada)
+MÓDULO 5 - EJERCICIO 2 (Adaptada)
 ÁREA DE CÍRCULOS E ITERACIONES
 Uso de bucles (for / while), listas, validación y estructuras de control.
 """
