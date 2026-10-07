@@ -1,13 +1,14 @@
 """ TODO 1 agregar tu nombre fecha titulo de una manera bonita """
-
+"Nombre: Franck Calderon"
+"Fecha: 10/06/26"
 
 # Importamos la biblioteca turtle (ya viene incluida en Python)
 import turtle
 
 # Configuración de la pantalla y la tortuga
 pantalla = turtle.Screen() # # Usamos sintaxis de punto . para acceder a la función Screen()
-pantalla.bgcolor("lightcyan")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
-pantalla.title("Titulo") #TODO 3 Asigna un título a la ventana usando title()
+pantalla.bgcolor("lightblue")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
+pantalla.title("turtle_paint") #TODO 3 Asigna un título a la ventana usando title()
 
 # Corre el programa hasta este punto utilizando """ """ o # para asegurar que funcione bien.
 
@@ -22,7 +23,7 @@ t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 # EJEMPLO: Dibujar la base de la casa (un cuadrado azul)
 # =============================================================
 
-t.color("darkblue", "lightblue")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
+t.color("darkblue", "lightgreen")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
 t.begin_fill()
 
 # TODO 6 Este for loop que hace?
