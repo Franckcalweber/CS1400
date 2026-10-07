@@ -2,8 +2,9 @@
 ====================================================================
 Mi Primera Función en Turtle
 ====================================================================
-NOMBRE: 
+NOMBRE: Franck Calderon
 Objetivo:
+
 Entender cómo encapsular código en una función para reutilizarlo y 
 dibujar figuras personalizadas de manera sencilla.
 
@@ -79,18 +80,42 @@ dibujar_figura(lados=5, tamaño=60, color_borde="purple", color_relleno="plum")
 mover(150, 0)
 dibujar_figura(lados=6, tamaño=50, color_borde="darkblue", color_relleno="skyblue")
 
+mover(0, -150)
+t.color("darkblue", "red")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
+t.begin_fill()
+for _ in range(4):
+    t.forward(100)  # 
+    t.left(90)      # 
+t.end_fill()
 
 # ==================================================================
+
 # 4. PREGUNTAS
 # ==================================================================
 """
 1.  ¿Cuantas funciones hay en este programa? Que proposito tienen? En tus propias palabras agrega comentario completo.
+Hay 2 funciones creadas en este programa.
+La función dibujar_figura() sirve para dibujar diferentes polígonos
+regulares. Podemos cambiar la cantidad de lados, el tamaño, el color
+del borde y el color del relleno sin tener que repetir todo el código.
+
+La función mover() sirve para cambiar la posición de la tortuga sin
+dibujar líneas mientras se mueve. Levanta el lápiz, mueve la tortuga
+a las coordenadas indicadas y después vuelve a bajar el lápiz.
 
 2. ¿Qué parámetro de la función 'dibujar_figura' tendrías que cambiar para hacer un octágono (8 lados)?
 
+Tendría que cambiar el parámetro "lados" y colocar lados=8.
+
 3 ¿En que numero de linea termina la funcion mover?
 
+En el código original, la función mover termina en la línea 64
+con la instrucción t.pendown().
+
 4. Bajo la seccion de pruebas, intenta hacer una nueva figura sin el uso de la funcion dibujar_figura.
+
+Agregué un cuadrado utilizando un for loop directamente, sin llamar
+a la función dibujar_figura().
 
 5. Guarda una captura de pantalla con las 4 figuras en la carpeta M06.
       
