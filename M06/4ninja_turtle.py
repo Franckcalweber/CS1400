@@ -32,6 +32,8 @@ t.speed(5)
 
 # TODO 1: Completa la definición de la función 'dibujar_triangulo'
 def dibujar_triangulo(t, longitud, angulo, color_relleno="orange"):
+    t.color("darkred", color_relleno)
+    t.begin_fill()
     """
     Dibuja una porción de tarta (triángulo isósceles) usando la tortuga 't'.
     
@@ -51,13 +53,18 @@ def dibujar_triangulo(t, longitud, angulo, color_relleno="orange"):
     
     # TODO 2: Calcula la longitud de la base del triángulo isósceles.
     # FÓRMULA: base = 2 * longitud * sin(angulo / 2)
+    mitad_angulo_rad = math.radians(angulo / 2)
+    base = 2 * longitud * math.sin(mitad_angulo_rad)
     
     
     # TODO 3: Calcula el ángulo de giro exterior para la tortuga en las esquinas.
     # Pista: La suma de ángulos internos de un triángulo es 180°.
     # El ángulo en la base es: (180 - angulo) / 2.
     # El giro exterior es: 180 - ángulo_base  =>  90 + (angulo / 2)
-    
+
+    angulo_giro_base = 90 + (angulo / 2)
+
+  
 
     # --------------------------------------------------------------
     # Paso B: Dibujo del Triángulo Isósceles
@@ -73,15 +80,33 @@ def dibujar_triangulo(t, longitud, angulo, color_relleno="orange"):
     # 5. Avanza 'longitud' (Lado 2 para regresar al centro)
     # 6. Gira 180° para quedar orientado en dirección opuesta
     
-    t.forward(longitud)
+  
     # tu codigo faltante aqui
-    t.left(180)  # Reorientar hacia afuera para la siguiente porción
-    
+   
+    # Reorientar hacia afuera para la siguiente porción
+    # Dibujar el triángulo
+
+    # TODO 4: Dibujar el triángulo
+    t.pencolor("darkred")
+    t.fillcolor(color_relleno)
+
+    t.begin_fill()
+
+    t.forward(longitud)
+    t.left(angulo_giro_base)
+    t.forward(base)
+    t.left(angulo_giro_base)
+    t.forward(longitud)
+    t.left(180)
+
     t.end_fill()
+
+# Orientar la tortuga para la siguiente porción
 
 
 # TODO 5: Función que reutiliza 'dibujar_triangulo' para construir la tarta completa. 
 # Parametros incluyen porciones, longitud, y el color del relleno.
+def dibujar_tarta(t, n_porciones, longitud, color_relleno="orange"):
 
     """
     Dibuja una tarta completa de 'n_porciones' llamando repetidamente
@@ -89,16 +114,23 @@ def dibujar_triangulo(t, longitud, angulo, color_relleno="orange"):
     """
     
     # TODO 6: Calcula el ángulo central de cada porción (360° / n_porciones)
-
+    angulo = 360 / n_porciones
     
     # TODO 7: Usa un bucle 'for' para dibujar todas las porciones llamando la funcion dibujar_triangulo
+    
 
+    for i in range(n_porciones):
+        dibujar_triangulo(t, longitud, angulo, color_relleno)
+    t.right(angulo)
 
 # TODO 8 (EXTRA/OPCIONAL): Función auxiliar para mover la tortuga sin dejar rastro
 # def mover_tortuga(t, x, y):
-    """Mueve la tortuga a las coordenadas (x, y) sin dibujar."""
     # Investigar .penup .goto y .pendown
-
+def mover_tortuga(t, x, y):
+    """Mueve la tortuga a las coordenadas (x, y) sin dibujar."""
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
 
 # ==================================================================
 # 3. Demostración del Poder de las Funciones
@@ -107,10 +139,17 @@ def dibujar_triangulo(t, longitud, angulo, color_relleno="orange"):
 # posiciones, con distintos números de porciones, tamaños y colores!
 # TODO 9: aqui deben ir tus instrucciones para dibujar.
 
-# --- Tarta 1: Tarta clásica de 6 porciones ---
+# Tarta 1: 6 porciones
+mover_tortuga(t, -100, 80)
+dibujar_tarta(t, 6, 65, "orange")
 
-# --- Tarta 2: Tarta grande de 12 porciones ---
+# Tarta 2: 12 porciones
+mover_tortuga(t, 100, 60)
+dibujar_tarta(t, 12, 85, "lightyellow")
 
-# --- Tarta 3: Tarta pequeña (o pizza) de 4 porciones ---
+# Tarta 3: 4 porciones
+mover_tortuga(t, -30, -120)
+dibujar_tarta(t, 4, 45, "tomato")
 
 # TODO 10: Finalizar ejecución al hacer clic
+pantalla.exitonclick()
