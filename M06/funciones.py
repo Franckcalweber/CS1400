@@ -16,6 +16,7 @@
 # --------------------------------------------------------------------------
 
 # TODO: Paso 1. Importa el módulo 'random'.
+import random
 
 
 def lanzar_dado():
@@ -29,10 +30,12 @@ def lanzar_dado():
     """
     # TODO: Paso 2. Genera un número aleatorio entre 1 y 6.
     #Guardalo en una variable llamada 'resultado'.
- 
+    resultado = random.randint(1, 6)
     # TODO: Paso 3. Devuelve el resultado.
-    return  # Reemplaza esto con la variable que contiene el resultado
+    # Reemplaza esto con la variable que contiene el resultado
+    return resultado  
 
+  
 
 # --- Bloque para probar tu función ---
 # Este código es para que pruebes tu función.
