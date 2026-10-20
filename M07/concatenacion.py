@@ -1,50 +1,91 @@
-""" 
+"""
 M7 Laboratorio presencial:
 Elije una pareja para entrevistar.
 La concatenación de cadenas para aprender a usar + y unir cadenas de texto.
 Incluir espacios manualmente (" "), y combinar entrada del usuario con otros textos.
 """
 
-# TODO Tarea 1: Escribe una linea de bienvenida a este programa 
+# Tarea 1: Bienvenida
+
+print("¡Bienvenido al programa de entrevista musical!")
 
 
-# TODO Tarea 2: Solicitar datos del usuario. 
-# Usar tres variables: nombre, apellido, y cancion.
-# ## Entrevista algun companero(a) para averiguar su cancion preferida y su nombrecompleto.
+# Tarea 2: Solicitar los datos
+# IMPORTANTE: Aquí se definen las variables ANTES de utilizarlas.
 
-# Una manera de validar entradas vacías
-# Toma en cuenta que cambios podrias realizar si tienen un segundo nombre, y/o un segundo apellido.
-# La meta es obtener su nombre completo.
+nombre = input("Escribe tu primer nombre: ")
+
+segundo_nombre = input(
+    "Escribe tu segundo nombre (presiona Enter si no tienes): "
+)
+
+apellido = input("Escribe tu primer apellido: ")
+
+segundo_apellido = input(
+    "Escribe tu segundo apellido (presiona Enter si no tienes): "
+)
+
+cancion = input("Escribe tu canción favorita: ")
+
+
+# Validar que los campos obligatorios no estén vacíos
+
 if not nombre.strip():
     print("Por favor, escribe tu primer nombre.")
     exit()
 
 if not apellido.strip():
-    print("Por favor, escribe tu apellido.")
+    print("Por favor, escribe tu primer apellido.")
     exit()
 
 if not cancion.strip():
     print("Por favor, escribe el nombre de una canción que te guste.")
     exit()
 
-# Formatear entrada: capitalizar nombres
-# Agregar nuevos variables si es necesario.
+
+# Formatear los datos ingresados
+
 nombre = nombre.strip().capitalize()
+segundo_nombre = segundo_nombre.strip().capitalize()
+
 apellido = apellido.strip().capitalize()
+segundo_apellido = segundo_apellido.strip().capitalize()
+
 cancion = cancion.strip().title()
 
-# TODO Tarea 3: Crear un variable llamado nombre_completo para juntar
-#  (concatenar) todos los nombres ingresados, usando los espacios adecuado.
+
+# Tarea 3: Crear el nombre completo utilizando concatenación
+
+nombre_completo = nombre
+
+# Agregar segundo nombre solamente si existe
+if segundo_nombre:
+    nombre_completo = nombre_completo + " " + segundo_nombre
+
+# Agregar primer apellido
+nombre_completo = nombre_completo + " " + apellido
+
+# Agregar segundo apellido solamente si existe
+if segundo_apellido:
+    nombre_completo = nombre_completo + " " + segundo_apellido
 
 
+# Tarea 4: Mostrar el nombre completo
 
-# TODO Tarea 4: Mostrar el resultado con alguna frase como por ejemplo, "Tu nombre completo es  ___ "
+print("Tu nombre completo es " + nombre_completo + ".")
 
 
+# Tarea 5: Crear un mensaje usando concatenación
 
-# TODO Tarea 5: Crear un ultimo variable, y agruegale más texto concatenado.
-# Puede ser un saludo, o un piropo que incluya el variable para la cancion.
-# Por ejemplo, "Hola ___, me encanta que tu cancion favorita sea ___! "
+mensaje_final = (
+    "Hola "
+    + nombre_completo
+    + ", me encanta que tu canción favorita sea "
+    + cancion
+    + "!"
+)
 
 # Imprimir a la terminal
+
+print(mensaje_final)
 
