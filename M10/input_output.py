@@ -39,6 +39,10 @@ REFRANES = {
 
     "Agua que no has de beber, dejala correr.":
         "Si algo no te conviene o no te toca, no te metas.",
+
+    #Refran Familiar
+    "Vaya y venga, y que nada lo detenga"
+      "Cumple tus objetivos sin rendirte en el proceso"
 }
 
 
