@@ -110,9 +110,7 @@ def parte_uno_entrada_salida():
     # TODO ¿Como usamos acentos en espanol, otra vez?
     # Python 3 permite usar acentos en cadenas de texto.
 # El archivo debe guardarse con codificacion UTF-8.
-    print("Tienes", edad, "años.")
-    
-    print("Tienes", edad, "anos.")                   # comas
+    print("Tienes", edad, "años.")                   # comas
     print("Tu comida favorita es " + comida + ".")   # concatenacion con +
 
     anos_para_100 = 100 - edad
