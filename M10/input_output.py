@@ -41,7 +41,7 @@ REFRANES = {
         "Si algo no te conviene o no te toca, no te metas.",
 
     #Refran Familiar
-    "Vaya y venga, y que nada lo detenga"
+    "Vaya y venga, y que nada lo detenga":
       "Cumple tus objetivos sin rendirte en el proceso"
 }
 
@@ -108,6 +108,10 @@ def parte_uno_entrada_salida():
     print(f"Mucho gusto, {nombre}!")                 # f-string
     
     # TODO ¿Como usamos acentos en espanol, otra vez?
+    # Python 3 permite usar acentos en cadenas de texto.
+# El archivo debe guardarse con codificacion UTF-8.
+    print("Tienes", edad, "años.")
+    
     print("Tienes", edad, "anos.")                   # comas
     print("Tu comida favorita es " + comida + ".")   # concatenacion con +
 
@@ -135,6 +139,9 @@ def parte_uno_entrada_salida():
 # PARTE 2 (EXTRA- si tienes tiempo): CONSUMIR UNA API JSON
 # ==========================================================
 #TODO ¿Que hace este api?
+# Esta API obtiene informacion de usuarios ficticios
+# desde JSONPlaceholder, como nombre, correo,
+# ciudad y empresa, utilizando una peticion HTTP.
 def parte_dos_api_json(nombre):
     """Consulta una API publica que responde en formato JSON."""
 
