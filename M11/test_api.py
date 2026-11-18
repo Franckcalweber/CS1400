@@ -18,13 +18,29 @@ print("\n--- Probando un lugar falso (AtlantisXYZ) ---")
 resultado_falso = obtener_coordenadas("AtlantisXYZ123")
 print(resultado_falso)
 
+print("\n--- Probando una ciudad válida (Dallas) ---")
+resultado_dallas = obtener_coordenadas("Dallas ")
+print(resultado_dallas)
+
 print("\n[FIN] Pruebas finalizadas.")
 
 # TODO 1: Cual es el resultado al correr test_api?
-# 
+# [TEST] Iniciando pruebas de la API...
+#--- Probando una ciudad válida (Bogotá) ---
+#{'nombre': 'Bogotá', 'pais': 'Colombia', 'lat': 4.60971, 'lon': -74.08175}
+
+#--- Probando otra ciudad (Tokio) ---
+#{'nombre': 'Tokio', 'pais': 'Japón', 'lat': 35.6895, 'lon': 139.69171}
+
+#--- Probando un lugar falso (AtlantisXYZ) ---
+# No se encontró la ubicación: 'AtlantisXYZ123'.
+#None
+
+#--- Probando una ciudad válida (Dallas) ---
+#{'nombre': 'Dallas', 'pais': 'Estados Unidos', 'lat': 32.78306, 'lon': -96.80667}
 # TODO 2: Agrega estas lineas para arreglar el problema con los acentos.
-# import sys
-# sys.stdout.reconfigure(encoding='utf-8')
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 # TODO 3: Intenta con otra ciudad. 
 """
 Si quieres probar ciudades que se llaman igual en distintos países
